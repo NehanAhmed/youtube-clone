@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0a02fbb60a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav>
+<div class="left">
+    <div class="sidebar-item-ham" id="ham-icon">
+        <span class="fa fa-bars" ></span>
+    </div>
+    <img src="logo.png" alt="logo" class="logo">
+</div>
+
+
+<div class="middle">
+    <input type="text" placeholder="Search" class="search-input">
+    <div class="search-icon"><span class="fa fa-search"></span></div>
+    <div class="microphone-icon"><span class="fa fa-microphone"></span></div>
+</div>
+<div class="right">
+    <div class="create-div">
+        <span class="fa fa-plus"></span>
+        <p>Create</p>
+    </div>
+    <div class="bell-div">
+        <span class="fa fa-bell"></span>
+    </div>
+    <div class="profile-div">
+        <img src="https://api.dicebear.com/6.x/avataaars/svg?seed=Felix" alt="Profile" class="profile-img">
+        <div class="profile-hover">
+            <div class="profile-info">
+                <img src="https://api.dicebear.com/6.x/avataaars/svg?seed=Felix" alt="Profile" class="profile-hover-img">
+                <div class="profile-text">
+                    <h4>John Doe</h4>
+                    <p>@johndoe</p>
+                    <p>Manage your Google Account</p>
+                </div>
+            </div>
+            <hr>
+            <div class="profile-links">
+                <div class="profile-link-item">
+                    <span class="fa fa-user"></span>
+                    <p>Your channel</p>
+                </div>
+                <div class="profile-link-item">
+                    <span class="fa fa-cog"></span>
+                    <p>Settings</p>
+                </div>
+                <div class="profile-link-item">
+                    <span class="fa fa-sign-out"></span>
+                    <p>Sign out</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+</nav>
+
+<div class="filter-bar">
+    <div class="filter-options">
+        <div class="filter-option active">All</div>
+        <div class="filter-option">JavaScript</div>
+        <div class="filter-option">Python</div>
+        <div class="filter-option">Web Development</div>
+        <div class="filter-option">React</div>
+        <div class="filter-option">Node.js</div>
+        <div class="filter-option">CSS</div>
+        <div class="filter-option">Machine Learning</div>
+        <div class="filter-option">Data Science</div>
+        <div class="filter-option">Angular</div>
+        <div class="filter-option">Vue.js</div>
+        <div class="filter-option">TypeScript</div>
+    </div>
+    <button class="filter-nav-btn next">
+        <span class="fa fa-chevron-right"></span>
+    </button>
+    <button class="filter-nav-btn prev">
+        <span class="fa fa-chevron-left"></span>
+    </button>
+</div>
+
+<div class="sidebar">
+   
+
+    <div class="sidebar-item">
+        <span class="fa fa-home"></span>
+        <p>Home</p>
+    </div>
+    <div class="sidebar-item">
+        <span class="fa fa-compass"></span>
+        <p>Explore</p>
+    </div>
+    <div class="sidebar-item">
+        <span class="fa fa-play"></span>
+        <p>Shorts</p>
+    </div>
+    <div class="sidebar-item">
+        <span class="fa fa-youtube"></span>
+        <p>Subscriptions</p>
+    </div>
+    <hr>
+    <div class="sidebar-item">
+        <span class="fa fa-book"></span>
+        <p>Library</p>
+    </div>
+    <div class="sidebar-item">
+        <span class="fa fa-history"></span>
+        <p>History</p>
+    </div>
+    <div class="sidebar-item">
+        <span class="fa fa-clock"></span>
+        <p>Watch Later</p>
+    </div>
+    <div class="sidebar-item">
+        <span class="fa fa-thumbs-up"></span>
+        <p>Liked Videos</p>
+    </div>
+    <hr>
+    <h3>Subscriptions</h3>
+    <div class="sidebar-item">
+        <img src="https://yt3.ggpht.com/ytc/APkrFKaqca-xQcJtp1Pqv-APucCa0nToHYGPVT_qVYUbNA=s88-c-k-c0x00ffffff-no-rj" alt="freeCodeCamp" class="channel-sidebar-icon">
+        <p>freeCodeCamp</p>
+    </div>
+    <div class="sidebar-item">
+        <img src="https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s88-c-k-c0x00ffffff-no-rj" alt="Traversy Media" class="channel-sidebar-icon">
+        <p>Traversy Media</p>
+    </div>
+    <div class="sidebar-item">
+        <img src="https://yt3.ggpht.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s88-c-k-c0x00ffffff-no-rj" alt="Web Dev Simplified" class="channel-sidebar-icon">
+        <p>Web Dev Simplified</p>
+    </div>
+    <div class="sidebar-item">
+        <img src="https://yt3.ggpht.com/ytc/APkrFKZGyiFJhC8R9z0QAH3qj3Mw6UoRE8fUiXP4gQ=s88-c-k-c0x00ffffff-no-rj" alt="Programming with Mosh" class="channel-sidebar-icon">
+        <p>Programming with Mosh</p>
+    </div>
+    <div class="sidebar-item">
+        <img src="https://yt3.ggpht.com/H9HJSD9tPvhS_DPMQtGNyF4YhHJZoqN5d8HKsz8VDyeNJ1LZgfJYgc5CMgYsCGZRm5yahCOZ=s88-c-k-c0x00ffffff-no-rj" alt="Net Ninja" class="channel-sidebar-icon">
+        <p>Net Ninja</p>
+    </div>
+    </div>
+
+    <div class="sidebar-vertical">
+    
+
+        <div class="sidebar-item-vertical">
+        <span class="fa fa-home"></span>
+        <p>Home</p>
+    </div>
+    <div class="sidebar-item-vertical">
+        <span class="fa fa-compass"></span>
+        <p>Explore</p>
+    </div>
+    <div class="sidebar-item-vertical">
+        <span class="fa fa-play"></span>
+        <p>Shorts</p>
+    </div>
+    <div class="sidebar-item-vertical-b">
+        <span class="fa fa-youtube"></span>
+        <p>Subscriptions</p>
+    </div>
+    <hr>
+    
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/PkZNo7MFNFg/hqdefault.jpg" alt="JavaScript Tutorial">
+            <div class="video-duration">3:12:24</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKaqca-xQcJtp1Pqv-APucCa0nToHYGPVT_qVYUbNA=s88-c-k-c0x00ffffff-no-rj" alt="freeCodeCamp">
+            </div>
+            <div class="video-details">
+                <h3>JavaScript Programming - Full Course for Beginners</h3>
+                <p class="channel-name">freeCodeCamp.org</p>
+                <div class="video-stats">
+                    <span>1.2M views</span>
+                    <span>•</span>
+                    <span>1 year ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/3PHXvlpOkf4/hqdefault.jpg" alt="Build Apps">
+            <div class="video-duration">15:45</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s88-c-k-c0x00ffffff-no-rj" alt="Traversy Media">
+            </div>
+            <div class="video-details">
+                <h3>Build 5 Projects With HTML, CSS & JavaScript</h3>
+                <p class="channel-name">Traversy Media</p>
+                <div class="video-stats">
+                    <span>850K views</span>
+                    <span>•</span>
+                    <span>8 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/hqdefault.jpg" alt="CSS Tutorial">
+            <div class="video-duration">21:32</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s88-c-k-c0x00ffffff-no-rj" alt="Web Dev Simplified">
+            </div>
+            <div class="video-details">
+                <h3>CSS Tutorial - Zero to Hero (Complete Course)</h3>
+                <p class="channel-name">Web Dev Simplified</p>
+                <div class="video-stats">
+                    <span>425K views</span>
+                    <span>•</span>
+                    <span>3 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/G3e-cpL7ofc/hqdefault.jpg" alt="HTML Tutorial">
+            <div class="video-duration">6:31:23</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKZGyiFJhC8R9z0QAH3qj3Mw6UoRE8fUiXP4gQ=s88-c-k-c0x00ffffff-no-rj" alt="SuperSimpleDev">
+            </div>
+            <div class="video-details">
+                <h3>HTML & CSS Full Course - Beginner to Pro</h3>
+                <p class="channel-name">SuperSimpleDev</p>
+                <div class="video-stats">
+                    <span>2.1M views</span>
+                    <span>•</span>
+                    <span>5 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/RGOj5yH7evk/hqdefault.jpg" alt="Git Tutorial">
+            <div class="video-duration">1:08:24</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKaqca-xQcJtp1Pqv-APucCa0nToHYGPVT_qVYUbNA=s88-c-k-c0x00ffffff-no-rj" alt="freeCodeCamp">
+            </div>
+            <div class="video-details">
+                <h3>Git and GitHub for Beginners - Crash Course</h3>
+                <p class="channel-name">freeCodeCamp.org</p>
+                <div class="video-stats">
+                    <span>3.4M views</span>
+                    <span>•</span>
+                    <span>2 years ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/w7ejDZ8SWv8/hqdefault.jpg" alt="React Tutorial">
+            <div class="video-duration">1:48:54</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s88-c-k-c0x00ffffff-no-rj" alt="Traversy Media">
+            </div>
+            <div class="video-details">
+                <h3>React JS Crash Course 2023</h3>
+                <p class="channel-name">Traversy Media</p>
+                <div class="video-stats">
+                    <span>1.8M views</span>
+                    <span>•</span>
+                    <span>6 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/OXGznpKZ_sA/hqdefault.jpg" alt="Python Tutorial">
+            <div class="video-duration">4:27:32</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKaqca-xQcJtp1Pqv-APucCa0nToHYGPVT_qVYUbNA=s88-c-k-c0x00ffffff-no-rj" alt="freeCodeCamp">
+            </div>
+            <div class="video-details">
+                <h3>Python Full Course for Beginners</h3>
+                <p class="channel-name">freeCodeCamp.org</p>
+                <div class="video-stats">
+                    <span>2.1M views</span>
+                    <span>•</span>
+                    <span>1 year ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/Oe421EPjeBE/hqdefault.jpg" alt="Node.js Tutorial">
+            <div class="video-duration">2:10:15</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s88-c-k-c0x00ffffff-no-rj" alt="Dev Ed">
+            </div>
+            <div class="video-details">
+                <h3>Node.js and Express.js - Full Course</h3>
+                <p class="channel-name">Dev Ed</p>
+                <div class="video-stats">
+                    <span>980K views</span>
+                    <span>•</span>
+                    <span>9 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/qz0aGYrrlhU/hqdefault.jpg" alt="HTML Tutorial">
+            <div class="video-duration">2:25:47</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKZGyiFJhC8R9z0QAH3qj3Mw6UoRE8fUiXP4gQ=s88-c-k-c0x00ffffff-no-rj" alt="Programming with Mosh">
+            </div>
+            <div class="video-details">
+                <h3>HTML & CSS Tutorial - Build a Website</h3>
+                <p class="channel-name">Programming with Mosh</p>
+                <div class="video-stats">
+                    <span>1.5M views</span>
+                    <span>•</span>
+                    <span>4 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/pQN-pnXPaVg/hqdefault.jpg" alt="SQL Tutorial">
+            <div class="video-duration">4:20:33</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKaqca-xQcJtp1Pqv-APucCa0nToHYGPVT_qVYUbNA=s88-c-k-c0x00ffffff-no-rj" alt="freeCodeCamp">
+            </div>
+            <div class="video-details">
+                <h3>SQL Tutorial - Full Database Course for Beginners</h3>
+                <p class="channel-name">freeCodeCamp.org</p>
+                <div class="video-stats">
+                    <span>3.2M views</span>
+                    <span>•</span>
+                    <span>2 years ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/gXLjWRteuWI/hqdefault.jpg" alt="Vue Tutorial">
+            <div class="video-duration">3:45:21</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s88-c-k-c0x00ffffff-no-rj" alt="Traversy Media">
+            </div>
+            <div class="video-details">
+                <h3>Vue.js Crash Course 2023</h3>
+                <p class="channel-name">Traversy Media</p>
+                <div class="video-stats">
+                    <span>420K views</span>
+                    <span>•</span>
+                    <span>3 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/7CqJlxBYj-M/hqdefault.jpg" alt="Flutter Tutorial">
+            <div class="video-duration">2:51:19</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s88-c-k-c0x00ffffff-no-rj" alt="Net Ninja">
+            </div>
+            <div class="video-details">
+                <h3>Flutter & Firebase App Build</h3>
+                <p class="channel-name">Net Ninja</p>
+                <div class="video-stats">
+                    <span>890K views</span>
+                    <span>•</span>
+                    <span>7 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/Www6cTUymCY/hqdefault.jpg" alt="React Native Tutorial">
+            <div class="video-duration">3:12:44</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKaqca-xQcJtp1Pqv-APucCa0nToHYGPVT_qVYUbNA=s88-c-k-c0x00ffffff-no-rj" alt="freeCodeCamp">
+            </div>
+            <div class="video-details">
+                <h3>React Native Tutorial for Beginners</h3>
+                <p class="channel-name">freeCodeCamp.org</p>
+                <div class="video-stats">
+                    <span>1.1M views</span>
+                    <span>•</span>
+                    <span>5 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/2uZqz6DOwL4/hqdefault.jpg" alt="AWS Tutorial">
+            <div class="video-duration">5:32:11</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKZGyiFJhC8R9z0QAH3qj3Mw6UoRE8fUiXP4gQ=s88-c-k-c0x00ffffff-no-rj" alt="Programming with Mosh">
+            </div>
+            <div class="video-details">
+                <h3>AWS Certified Cloud Practitioner Course</h3>
+                <p class="channel-name">Programming with Mosh</p>
+                <div class="video-stats">
+                    <span>750K views</span>
+                    <span>•</span>
+                    <span>2 months ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <div class="video-thumbnail">
+            <img src="https://img.youtube.com/vi/BwuLxPH8IDs/hqdefault.jpg" alt="TypeScript Tutorial">
+            <div class="video-duration">1:25:39</div>
+        </div>
+        <div class="video-info">
+            <div class="channel-icon">
+                <img src="https://yt3.ggpht.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s88-c-k-c0x00ffffff-no-rj" alt="Web Dev Simplified">
+            </div>
+            <div class="video-details">
+                <h3>TypeScript Course for Beginners 2023</h3>
+                <p class="channel-name">Web Dev Simplified</p>
+                <div class="video-stats">
+                    <span>320K views</span>
+                    <span>•</span>
+                    <span>1 month ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
