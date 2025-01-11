@@ -161,16 +161,21 @@ nav {
 .sidebar {
     width: 240px;
     position: fixed;
-    left: 0;
+    left: -240px; /* Hidden by default */
     top: 56px;
     bottom: 0;
     background: white;
     overflow-y: auto;
     z-index: 98;
     padding: 12px 0;
+    transition: all 0.3s ease;
 }
 
-.sidebar-item {
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .sidebar-item {
     display: flex;
     align-items: center;
     padding: 8px 24px;
@@ -178,37 +183,71 @@ nav {
     gap: 24px;
 }
 
-.sidebar-item:hover {
+.sidebar .sidebar-item:hover {
     background-color: #f2f2f2;
 }
 
-.sidebar-item span {
+.sidebar .sidebar-item span {
     font-size: 20px;
-    width: 24px;
 }
 
-.sidebar-item p {
+.sidebar .sidebar-item p {
     font-size: 14px;
 }
 
-.sidebar hr {
-    margin: 12px 0;
-    border: none;
-    border-top: 1px solid #e5e5e5;
+/* Vertical Sidebar Styles */
+.sidebar-vertical {
+    width: 72px;
+    position: fixed;
+    left: 0;
+    top: 56px;
+    bottom: 0;
+    background: white;
+    overflow-y: auto;
+    z-index: 98;
+    padding: 12px 0;
+    transition: all 0.3s ease;
 }
 
-.sidebar h3 {
-    padding: 8px 24px;
-    font-size: 16px;
-    font-weight: normal;
-    color: #606060;
+.sidebar-vertical.hidden {
+    left: -72px;
 }
 
-.channel-sidebar-icon {
+.sidebar-vertical .sidebar-item {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.sidebar-vertical .sidebar-item:hover {
+    background-color: #f2f2f2;
+}
+
+.sidebar-vertical .sidebar-item span {
+    font-size: 20px;
+}
+
+.sidebar-vertical .channel-sidebar-icon {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 72px; /* Default margin for vertical sidebar */
+    margin-top: 112px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.main-content.sidebar-visible {
+    margin-left: 240px;
 }
 
 /* Filter Bar Styles */
@@ -218,11 +257,16 @@ nav {
     padding: 12px 24px;
     position: fixed;
     top: 56px;
-    left: 240px;
+    left: 72px; /* Default position for vertical sidebar */
     right: 0;
     height: 56px;
     z-index: 99;
     border-bottom: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.filter-bar.sidebar-visible {
+    left: 240px;
 }
 
 .filter-options {
@@ -336,14 +380,6 @@ nav {
     margin-top: 112px;
     min-height: calc(100vh - 112px);
     width: 100%;
-}
-
-/* Main Content */
-.main-content {
-    margin-left: 240px;
-    width: calc(100% - 240px);
-    padding: 24px;
-    min-height: calc(100vh - 112px);
 }
 
 /* Videos Grid */

@@ -19,20 +19,22 @@ export function initializeEvents() {
     hamIcon.addEventListener('click', () => {
         const sidebarVertical = document.querySelector('.sidebar-vertical');
         const sidebar = document.querySelector('.sidebar');
-        const videoGrid = document.querySelector('.video-grid');
+        const mainContent = document.querySelector('.main-content');
+        const filterBar = document.querySelector('.filter-bar');
         
         if (sidebar.classList.contains('active')) {
             // Switch back to vertical sidebar
             sidebar.classList.remove('active');
-            sidebarVertical.classList.remove('active');
-            videoGrid.classList.remove('sidebar-visible');
+            sidebarVertical.classList.remove('hidden');
+            mainContent.classList.remove('sidebar-visible');
+            filterBar.classList.remove('sidebar-visible');
         } else {
             // Switch to regular sidebar
             sidebar.classList.add('active');
-            sidebarVertical.classList.add('active');
-            videoGrid.classList.add('sidebar-visible');
+            sidebarVertical.classList.add('hidden');
+            mainContent.classList.add('sidebar-visible');
+            filterBar.classList.add('sidebar-visible');
         }
-        filterBar.classList.toggle('sidebar-visible');
     });
 
     // Search functionality
@@ -165,4 +167,7 @@ export function initializeEvents() {
 
     // Initial check for button visibility
     prevBtn.style.display = 'none';
-} 
+}
+
+// Call initializeEvents when the DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeEvents); 
