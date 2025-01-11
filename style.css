@@ -20,14 +20,15 @@ nav{
 }
 .logo{
     
-    height: 70px;
+    height: 120px;
     margin-left: 10px;
 }
 
 .left{
-    width: 200px;
+    width: 400px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     /* background: #000; */
     

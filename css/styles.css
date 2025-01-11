@@ -1,0 +1,1081 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 56px;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.sidebar-item-ham {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.sidebar-item-ham:hover {
+    background-color: #f0f0f0;
+}
+
+.logo {
+    height: 32px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 0 1 732px; /* Fixed width like YouTube */
+}
+
+.search-input {
+    width: 100%;
+    padding: 0 4px 0 16px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 40px 0 0 40px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #1c62b9;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+    height: 40px;
+    width: 64px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 40px 40px 0;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon:hover {
+    background-color: #f0f0f0;
+}
+
+.microphone-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.microphone-icon:hover {
+    background-color: #f0f0f0;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.create-div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.create-div:hover {
+    background-color: #f0f0f0;
+}
+
+.create-div p {
+    font-size: 14px;
+}
+
+.bell-div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bell-div:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-div {
+    position: relative;
+    cursor: pointer;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.profile-div:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 240px;
+    position: fixed;
+    left: 0;
+    top: 56px;
+    bottom: 0;
+    background: white;
+    overflow-y: auto;
+    z-index: 98;
+    padding: 12px 0;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    cursor: pointer;
+    gap: 24px;
+}
+
+.sidebar-item:hover {
+    background-color: #f2f2f2;
+}
+
+.sidebar-item span {
+    font-size: 20px;
+    width: 24px;
+}
+
+.sidebar-item p {
+    font-size: 14px;
+}
+
+.sidebar hr {
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid #e5e5e5;
+}
+
+.sidebar h3 {
+    padding: 8px 24px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #606060;
+}
+
+.channel-sidebar-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Filter Bar Styles */
+.filter-bar {
+    border-top: none;
+    background-color: white;
+    padding: 12px 24px;
+    position: fixed;
+    top: 56px;
+    left: 240px;
+    right: 0;
+    height: 56px;
+    z-index: 99;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-options {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.filter-options::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-option {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.filter-option:hover {
+    background: #e5e5e5;
+}
+
+.filter-option.active {
+    background: #030303;
+    color: white;
+    border-color: #030303;
+}
+
+.filter-nav-btn {
+    border: none;
+    background: white;
+    padding: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Profile Hover Menu */
+.profile-hover {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 300px;
+    display: none;
+    border: 1px solid #e5e5e5;
+}
+
+.profile-div:hover .profile-hover {
+    display: block;
+}
+
+.profile-info {
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.profile-hover-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-text h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.profile-text p {
+    color: #606060;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.profile-links {
+    padding: 8px 0;
+}
+
+.profile-link-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.profile-link-item:hover {
+    background-color: #f2f2f2;
+}
+
+.profile-link-item span {
+    font-size: 20px;
+    width: 24px;
+}
+
+.profile-link-item p {
+    font-size: 14px;
+}
+
+/* Page Layout */
+.page-container {
+    margin-top: 112px;
+    min-height: calc(100vh - 112px);
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    padding: 24px;
+    min-height: calc(100vh - 112px);
+}
+
+/* Videos Grid */
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 24px;
+    max-width: 2200px;
+    margin: 0 auto;
+    opacity: 1;
+}
+
+/* Video Card */
+.video-item {
+    position: relative;
+    transition: transform 0.2s;
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+}
+
+.video-item:hover {
+    transform: scale(1.02);
+    z-index: 2;
+}
+
+/* Thumbnail */
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: #000;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1;
+}
+
+.video-item:hover .video-thumbnail::before {
+    opacity: 1;
+}
+
+/* Video Info */
+.video-info {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    padding: 0 8px;
+}
+
+.channel-icon {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.channel-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.channel-icon:hover img {
+    transform: scale(1.1);
+}
+
+.channel-icon::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.channel-icon:hover::after {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #0f0f0f;
+    transition: color 0.1s;
+}
+
+.video-item:hover .title {
+    color: #065fd4;
+}
+
+.channel-name {
+    font-size: 12px;
+    color: #606060;
+    margin-bottom: 2px;
+}
+
+.video-stats {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #606060;
+}
+
+.video-stats span {
+    display: flex;
+    align-items: center;
+}
+
+/* Progress Bar */
+.video-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 3;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #ff0000;
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+/* Responsive Design */
+@media (max-width: 2000px) {
+    .videos-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1600px) {
+    .videos-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .videos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sidebar {
+        width: 72px;
+    }
+    .main-content {
+        margin-left: 72px;
+        width: calc(100% - 72px);
+    }
+}
+
+@media (max-width: 768px) {
+    .videos-container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: none;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Hover Effects */
+.video-thumbnail {
+    transition: all 0.2s ease;
+}
+
+.video-item:hover .video-thumbnail {
+    border-radius: 0;
+}
+
+.video-item:hover .video-thumbnail img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover .title {
+    color: #065fd4;
+}
+
+/* Add video duration */
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 3px 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Sidebar Improvements */
+.sidebar {
+    padding-top: 0;
+}
+
+.sidebar-item {
+    height: 40px;
+    padding: 0 24px;
+}
+
+.sidebar-item span {
+    color: #030303;
+}
+
+.sidebar h3 {
+    padding: 8px 24px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #606060;
+}
+
+/* Improve channel icons */
+.channel-sidebar-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Loading Skeleton */
+@keyframes loading {
+    0% { background-position: -200% 0; opacity: 0.7; }
+    100% { background-position: 200% 0; opacity: 0.7; }
+}
+
+.video-item.loading .video-thumbnail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    opacity: 0.7;
+}
+
+/* Video Hover Effects */
+.video-thumbnail {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-preview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.video-thumbnail:hover .hover-preview {
+    opacity: 1;
+}
+
+.preview-timeline-bar {
+    height: 100%;
+    background: #ff0000;
+    width: 0;
+}
+
+.video-actions {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 3;
+}
+
+.video-item:hover .video-actions {
+    opacity: 1;
+}
+
+.action-btn {
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+/* Video Menu */
+.video-menu {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.menu-btn {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+.video-info:hover .menu-btn {
+    opacity: 1;
+}
+
+.menu-btn:hover {
+    background: #f2f2f2;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    width: 240px;
+    display: none;
+    z-index: 1000;
+    padding: 8px 0;
+    animation: menuFade 0.1s ease-out;
+}
+
+@keyframes menuFade {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #0f0f0f;
+    transition: background-color 0.1s;
+}
+
+.menu-item:hover {
+    background: #f2f2f2;
+}
+
+.menu-item .material-icons {
+    font-size: 20px;
+    color: #606060;
+}
+
+/* Verified Badge */
+.verified-badge {
+    font-size: 14px !important;
+    color: #606060;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    background: #0f0f0f;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 10000;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Channel Info Tooltip */
+.channel-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: -12px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 300px;
+    display: none;
+    z-index: 1000;
+    animation: tooltipFade 0.2s ease-out;
+}
+
+.channel-icon:hover .channel-tooltip {
+    display: block;
+}
+
+@keyframes tooltipFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Video Preview */
+.video-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+    display: none;
+}
+
+.video-item:hover .video-preview {
+    opacity: 1;
+    display: block;
+}
+
+/* Loading Animation for Thumbnails */
+.video-thumbnail img {
+    transition: opacity 0.2s;
+}
+
+.video-thumbnail img[loading] {
+    opacity: 0.5;
+}
+
+/* Improve Hover States */
+.video-item {
+    transition: transform 0.2s;
+    opacity: 1;
+}
+
+.video-item:hover {
+    transform: scale(1.02);
+}
+
+/* Add smooth transitions */
+.video-thumbnail img {
+    transition: transform 0.3s ease;
+    opacity: 1;
+}
+
+.video-item:hover .video-thumbnail img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Skeleton Loading */
+.skeleton {
+    pointer-events: none;
+}
+
+.skeleton-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #e5e5e5;
+    margin-bottom: 12px;
+}
+
+.skeleton-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #e5e5e5;
+    overflow: hidden;
+}
+
+.skeleton-line {
+    height: 16px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.skeleton-line.title-line {
+    height: 20px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.skeleton-line.short {
+    width: 60%;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.skeleton-animation {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+/* Remove old loading animation */
+.video-item.loading .video-thumbnail::before {
+    display: none;
+}
+
+/* Ensure proper spacing for skeleton items */
+.skeleton .video-info {
+    display: flex;
+    gap: 12px;
+    padding: 0 4px;
+}
+
+.skeleton .video-details {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Improve skeleton responsiveness */
+@media (max-width: 1600px) {
+    .skeleton .skeleton-line.title-line {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .skeleton .skeleton-line.title-line {
+        width: 85%;
+    }
+    .skeleton .skeleton-line.short {
+        width: 50%;
+    }
+}
+
+/* YouTube Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #f2f2f2;
+    z-index: 9999;
+}
+
+.preloader-bar {
+    height: 100%;
+    width: 0;
+    background-color: #ff0000;
+    transition: width 0.2s ease;
+    position: relative;
+}
+
+.preloader-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 0, 0, 0) 0%,
+        rgba(255, 0, 0, 0.5) 50%,
+        rgba(255, 0, 0, 0) 100%
+    );
+    animation: preloader-shine 1s infinite;
+}
+
+@keyframes preloader-shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Fade out animation for preloader */
+.preloader.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Ensure content is hidden while loading */
+.content-loading {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.content-loaded {
+    opacity: 1;
+}
+
+/* Channel Tooltip */
+.channel-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: -12px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 300px;
+    display: none;
+    z-index: 1000;
+    animation: tooltipFade 0.2s ease-out;
+}
+
+.channel-preview {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.channel-preview img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.channel-info {
+    flex: 1;
+}
+
+.channel-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #0f0f0f;
+}
+
+.subscribers {
+    font-size: 12px;
+    color: #606060;
+    margin-bottom: 16px;
+}
+
+.subscribe-btn {
+    background: #0f0f0f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.subscribe-btn:hover {
+    background: #272727;
+} 
