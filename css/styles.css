@@ -542,7 +542,7 @@ nav {
 }
 
 /* Responsive Design */
-@media (max-width: 2000px) {
+@media (max-width: 1920px) {
     .videos-container {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -558,86 +558,192 @@ nav {
     .videos-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .middle {
+        flex: 0 1 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Hide text in regular sidebar */
+    .sidebar .sidebar-item p {
+        display: none;
+    }
+
     .sidebar {
         width: 72px;
     }
-    .main-content {
+
+    .sidebar.active {
+        width: 72px;
+        left: 0;
+    }
+
+    .main-content.sidebar-visible {
         margin-left: 72px;
-        width: calc(100% - 72px);
+    }
+
+    .filter-bar.sidebar-visible {
+        left: 72px;
+    }
+
+    /* Hide sidebar headings and dividers */
+    .sidebar h3,
+    .sidebar hr {
+        display: none;
+    }
+
+    /* Center icons in regular sidebar */
+    .sidebar .sidebar-item {
+        padding: 16px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
     }
 }
 
 @media (max-width: 768px) {
     .videos-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 16px;
     }
-    .sidebar {
+
+    /* Adjust navbar */
+    .middle {
+        flex: 1;
+        margin: 0 8px;
+    }
+
+    .create-div p {
         display: none;
     }
+
+    /* Hide microphone icon */
+    .microphone-icon {
+        display: none;
+    }
+
+    /* Adjust filter bar */
+    .filter-bar {
+        left: 0 !important;
+        padding: 12px 16px;
+    }
+
+    /* Hide both sidebars */
+    .sidebar,
+    .sidebar-vertical {
+        display: none;
+    }
+
+    /* Adjust main content */
     .main-content {
-        margin-left: 0;
-        width: 100%;
+        margin-left: 0 !important;
+        padding: 16px;
+    }
+
+    /* Make video thumbnails larger */
+    .video-thumbnail {
+        aspect-ratio: 16/9;
+    }
+
+    /* Adjust video info spacing */
+    .video-info {
+        padding: 0;
     }
 }
 
-/* Hover Effects */
-.video-thumbnail {
-    transition: all 0.2s ease;
+@media (max-width: 480px) {
+    /* Simplify navbar */
+    nav {
+        padding: 0 8px;
+    }
+
+    .logo {
+        height: 24px;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .search-icon {
+        width: 40px;
+        border: none;
+        background: transparent;
+    }
+
+    .search-icon:hover {
+        background: #f0f0f0;
+        border-radius: 50%;
+    }
+
+    /* Adjust filter bar */
+    .filter-bar {
+        padding: 8px;
+    }
+
+    .filter-option {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    /* Adjust video info */
+    .channel-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .title {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .channel-name,
+    .video-stats {
+        font-size: 11px;
+    }
 }
 
-.video-item:hover .video-thumbnail {
-    border-radius: 0;
+/* Improve hover states for touch devices */
+@media (hover: none) {
+    .video-item:hover {
+        transform: none;
+    }
+
+    .video-thumbnail:hover img {
+        transform: none;
+    }
+
+    .video-actions,
+    .menu-btn {
+        opacity: 1;
+    }
+
+    .hover-preview {
+        display: none;
+    }
 }
 
-.video-item:hover .video-thumbnail img {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+/* Adjust sidebar transitions */
+.sidebar,
+.sidebar-vertical,
+.main-content,
+.filter-bar {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.video-item:hover .title {
-    color: #065fd4;
+/* Improve loading states */
+.skeleton {
+    opacity: 0.7;
 }
 
-/* Add video duration */
-.video-duration {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 3px 4px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-/* Sidebar Improvements */
-.sidebar {
-    padding-top: 0;
-}
-
-.sidebar-item {
-    height: 40px;
-    padding: 0 24px;
-}
-
-.sidebar-item span {
-    color: #030303;
-}
-
-.sidebar h3 {
-    padding: 8px 24px;
-    font-size: 16px;
-    font-weight: normal;
-    color: #606060;
-}
-
-/* Improve channel icons */
-.channel-sidebar-icon {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    object-fit: cover;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
 
 /* Loading Skeleton */
